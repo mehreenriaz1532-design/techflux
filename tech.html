@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech - TECHFLUX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #f4f7f9; --card-bg: #ffffff; --text: #2d3436; --text-dim: #636e72; --primary: #7f5af0; --secondary: #2cb67d; --border: rgba(0,0,0,0.08); --shadow: 0 5px 25px rgba(0,0,0,0.06); }
+        body.dark { --bg: #0a0a0f; --card-bg: rgba(20, 20, 30, 0.6); --text: #e0e0e0; --text-dim: #a0a0b0; --border: rgba(255,255,255,0.1); --shadow: 0 5px 25px rgba(0,0,0,0.3); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: var(--bg); color: var(--text); transition: 0.3s; }
+        .top { width: 100%; height: 90px; background: var(--card-bg); backdrop-filter: blur(10px); display: flex; align-items: center; padding: 0 80px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; background: linear-gradient(90deg, #7f5af0, #2cb67d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-right: 80px; }
+        .nav-links { display: flex; gap: 35px; }
+        .HTAXT { text-decoration: none; color: var(--text-dim); font-weight: 600; font-size: 18px; padding: 8px 15px; border-radius: 6px; transition: 0.3s; }
+        .HTAXT:hover, .HTAXT.active { color: var(--text); background: var(--bg); }
+        .theme-toggle { margin-left: auto; background: none; border: 2px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 20px; transition: 0.3s; }
+        .theme-toggle:hover { border-color: var(--primary); }
+        .section { padding: 80px; }
+        .section h1 { font-family: 'Montserrat', sans-serif; font-size: 40px; margin-bottom: 50px; font-weight: 900; }
+        .tech-list { display: flex; flex-direction: column; gap: 25px; }
+        
+        /* YEH WALA CARD CODE FIXED HAI */
+        .tech-item { display: flex; gap: 25px; background: var(--card-bg); backdrop-filter: blur(10px); padding: 25px; border-radius: 16px; box-shadow: var(--shadow); transition: 0.4s; border: 1px solid var(--border); text-decoration: none; color: inherit; cursor: pointer; }
+        .tech-item:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(127,90,240,0.15); }
+        .tech-item * { pointer-events: none; } /* IS LINE SE CARD CLICK HOGA */
+        
+        .tech-img { width: 280px; height: 180px; border-radius: 12px; background-size: cover; background-position: center; flex-shrink: 0; }
+        .tech-content h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; margin-bottom: 10px; color: var(--text); }
+        .tech-content p { color: var(--text-dim); line-height: 1.7; font-size: 16px; }
+        .tech-meta { font-size: 14px; color: var(--secondary); margin-top: 15px; display: flex; gap: 20px; font-weight: 500; }
+        .tag-tech { background: linear-gradient(90deg, #00d2d3, #01a3a4); color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+        .footer { background: var(--bg); color: var(--text-dim); padding: 50px 80px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">TECHFLUX</div>
+        <div class="nav-links">
+            <a href="index.html" class="HTAXT">Home</a>
+            <a href="tech.html" class="HTAXT active">Tech</a>
+            <a href="news.html" class="HTAXT">News</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </div>
+    <div class="section">
+        <h1>Tech Articles</h1>
+        <div class="tech-list">
+            <a href="detail_2.html" class="tech-item">
+                <div class="tech-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600');"></div>
+                <div class="tech-content"><span class="tag-tech">WEB DEV</span><h3>Learn React in 30 Days: Complete Roadmap 2026</h3><p>Complete roadmap to become a React developer in 2026 with AI tools and Next.js.</p><div class="tech-meta"><span>📅 Yesterday</span><span>⏱️ 6 min read</span></div></div>
+            </a>
+            <a href="detail_1.html" class="tech-item">
+                <div class="tech-img" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600');"></div>
+                <div class="tech-content"><span class="tag-tech">AI</span><h3>ChatGPT-5 is Coming: What to Expect</h3><p>OpenAI's biggest update. 10x faster, video generation, human level reasoning.</p><div class="tech-meta"><span>📅 2 Hours Ago</span><span>⏱️ 5 min read</span></div></div>
+            </a>
+        </div>
+    </div>
+    <div class="footer"><h3 style="font-family: Montserrat;">TECHFLUX</h3><p>© 2026 TechFlux. All Rights Reserved.</p></div>
+<script>
+    function toggleTheme() { document.body.classList.toggle('dark'); const btn = document.querySelector('.theme-toggle'); if(document.body.classList.contains('dark')) { btn.innerHTML = '☀️'; localStorage.setItem('theme', 'dark'); } else { btn.innerHTML = '🌙'; localStorage.setItem('theme', 'light'); } }
+    if(localStorage.getItem('theme') === 'dark') { document.body.classList.add('dark'); document.querySelector('.theme-toggle').innerHTML = '☀️'; }
+</script>
+</body>
+</html>

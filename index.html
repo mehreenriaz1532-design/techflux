@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHFLUX - Premium Tech News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* THEME VARIABLES - IS SE HI DARK/LIGHT CHALEGA */
+        :root { --bg: #f4f7f9; --card-bg: #ffffff; --text: #2d3436; --text-dim: #636e72; --primary: #7f5af0; --secondary: #2cb67d; --border: rgba(0,0,0,0.08); --shadow: 0 5px 25px rgba(0,0,0,0.06); }
+        body.dark { --bg: #0a0a0f; --card-bg: rgba(20, 20, 30, 0.6); --text: #e0e0e0; --text-dim: #a0a0b0; --border: rgba(255,255,255,0.1); --shadow: 0 5px 25px rgba(0,0,0,0.3); }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: var(--bg); color: var(--text); transition: 0.3s; }
+        
+        .top { width: 100%; height: 90px; background: var(--card-bg); backdrop-filter: blur(10px); display: flex; align-items: center; padding: 0 80px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; background: linear-gradient(90deg, #7f5af0, #2cb67d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-right: 80px; }
+        .nav-links { display: flex; gap: 35px; }
+        .HTAXT { text-decoration: none; color: var(--text-dim); font-weight: 600; font-size: 18px; padding: 8px 15px; border-radius: 6px; transition: 0.3s; }
+        .HTAXT:hover, .HTAXT.active { color: var(--text); background: var(--bg); }
+        
+        /* TOGGLE BUTTON */
+        .theme-toggle { margin-left: auto; background: none; border: 2px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 20px; transition: 0.3s; }
+        .theme-toggle:hover { border-color: var(--primary); }
+
+        .hero { height: 500px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400') center/cover; color: white; padding: 50px 80px; display: flex; flex-direction: column; justify-content: flex-end; }
+        body.dark .hero { background: linear-gradient(rgba(10,10,15,0.4), rgba(10,10,15,0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400') center/cover; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 50px; font-weight: 900; max-width: 600px; }
+        .hero p { font-size: 18px; margin-top: 10px; max-width: 500px; }
+
+        .section { padding: 80px; }
+        .section h2 { font-family: 'Montserrat', sans-serif; font-size: 36px; margin-bottom: 40px; font-weight: 900; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 16px; box-shadow: var(--shadow); transition: 0.4s; border: 1px solid var(--border); text-decoration: none; color: inherit; cursor: pointer; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); }
+        .card * { pointer-events: none; } /* IS SE CARD CLICK HOGA */
+        .card-img { height: 200px; background-size: cover; background-position: center; border-radius: 16px 16px 0 0; }
+        .card-content { padding: 25px; }
+        .card-content h3 { font-family: 'Montserrat', sans-serif; font-size: 20px; margin-bottom: 10px; }
+        .card-content p { color: var(--text-dim); font-size: 15px; }
+        .card-meta { font-size: 13px; color: var(--secondary); margin-top: 15px; display: flex; gap: 15px; }
+        .tag { background: linear-gradient(90deg, #7f5af0, #2cb67d); color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+
+        .footer { background: var(--bg); color: var(--text-dim); padding: 50px 80px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">TECHFLUX</div>
+        <div class="nav-links">
+            <a href="index.html" class="HTAXT active">Home</a>
+            <a href="tech.html" class="HTAXT">Tech</a>
+            <a href="news.html" class="HTAXT">News</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button> <!-- TOGGLE BUTTON -->
+    </div>
+
+    <div class="hero">
+        <h1>The Future of Technology Starts Here</h1>
+        <p>Get the latest AI, Web Dev and Tech news in one place.</p>
+    </div>
+
+    <div class="section">
+        <h2>Latest Articles</h2>
+        <div class="card-grid">
+            <a href="detail_1.html" class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600');"></div>
+                <div class="card-content"><span class="tag">AI</span><h3>ChatGPT-5 is Coming</h3><p>OpenAI's biggest update. 10x faster, video generation.</p><div class="card-meta"><span>📅 2h ago</span><span>⏱️ 5 min</span></div></div>
+            </a>
+            <a href="detail_2.html" class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600');"></div>
+                <div class="card-content"><span class="tag">WEB DEV</span><h3>Learn React in 30 Days</h3><p>Complete roadmap to become a React developer in 2026.</p><div class="card-meta"><span>📅 Yesterday</span><span>⏱️ 6 min</span></div></div>
+            </a>
+            <a href="detail_4.html" class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600');"></div>
+                <div class="card-content"><span class="tag">NEWS</span><h3>Google Lays off 5000 Employees</h3><p>Major AI restructuring. Stock jumped 4%.</p><div class="card-meta"><span>📅 2h ago</span><span>⏱️ 3 min</span></div></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer"><h3 style="font-family: Montserrat;">TECHFLUX</h3><p>© 2026 TechFlux. All Rights Reserved.</p></div>
+
+<!-- YE SCRIPT SAB SE IMPORTANT HAI - IS SE THEME SAVE HOGI -->
+<script>
+    function toggleTheme() { 
+        document.body.classList.toggle('dark'); 
+        const btn = document.querySelector('.theme-toggle'); 
+        if(document.body.classList.contains('dark')) { 
+            btn.innerHTML = '☀️'; 
+            localStorage.setItem('theme', 'dark'); 
+        } else { 
+            btn.innerHTML = '🌙'; 
+            localStorage.setItem('theme', 'light'); 
+        } 
+    }
+    // PAGE LOAD HOTE HI CHECK KAREGA THEME KYA THI
+    if(localStorage.getItem('theme') === 'dark') { 
+        document.body.classList.add('dark'); 
+        document.querySelector('.theme-toggle').innerHTML = '☀️'; 
+    }
+</script>
+</body>
+</html>
