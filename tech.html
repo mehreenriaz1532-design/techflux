@@ -10,12 +10,12 @@
         body.dark { --bg: #0a0a0f; --card-bg: rgba(20, 20, 30, 0.6); --text: #e0e0e0; --text-dim: #a0a0b0; --border: rgba(255,255,255,0.1); --shadow: 0 5px 25px rgba(0,0,0,0.3); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background: var(--bg); color: var(--text); transition: 0.3s; }
-        .top { width: 100%; height: 90px; background: var(--card-bg); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 80px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; background: linear-gradient(90deg, #7f5af0, #2cb67d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-links { display: flex; gap: 35px; }
+        .top { width: 100%; height: 90px; background: var(--card-bg); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 80px; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; gap: 20px; } /* gap add */
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 28px; background: linear-gradient(90deg, #7f5af0, #2cb67d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; flex-shrink: 0; } /* flex-shrink add */
+        .nav-links { display: flex; gap: 35px; flex: 1; justify-content: center; } /* flex:1 aur center add */
         .HTAXT { text-decoration: none; color: var(--text-dim); font-weight: 600; font-size: 18px; padding: 8px 15px; border-radius: 6px; transition: 0.3s; white-space: nowrap; }
         .HTAXT:hover, .HTAXT.active { color: var(--text); background: var(--bg); }
-        .theme-toggle { background: none; border: 2px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 20px; transition: 0.3s; }
+        .theme-toggle { background: none; border: 2px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; cursor: pointer; font-size: 20px; transition: 0.3s; flex-shrink: 0; } /* flex-shrink add */
         .theme-toggle:hover { border-color: var(--primary); }
         .section { padding: 80px; }
         .section h1 { font-family: 'Montserrat', sans-serif; font-size: 40px; margin-bottom: 50px; font-weight: 900; }
@@ -32,50 +32,49 @@
         .tag-tech { background: linear-gradient(90deg, #00d2d3, #01a3a4); color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
         .footer { background: var(--bg); color: var(--text-dim); padding: 50px 80px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border); }
 
-    /* ===== MOBILE RESPONSIVE FIX v6 - FINAL ===== */
-    @media (max-width: 768px) {
-        body { overflow-x: hidden; }
-        
-        /* NAVBAR KA FINAL FIX */
-        .top { 
-            padding: 0 10px; 
-            height: 55px; 
-        }
-        .logo { 
-            font-size: 16px; 
-        }
-        .nav-links { 
-            gap: 2px; 
-        }
-        .HTAXT { 
-            font-size: 11px; 
-            padding: 3px 5px;
-        }
-        .theme-toggle { 
-            padding: 4px 6px; 
-            font-size: 12px;
-            border-width: 1px;
-        }
-        
-        .section { padding: 25px 15px; }
-        .section h1 { font-size: 26px; margin-bottom: 25px; }
-        
-        /* CARD KA FIX */
-        .tech-item {
-            flex-direction: column !important; 
-            gap: 15px;
-            padding: 15px;
-        }
-        .tech-img { 
-            width: 100% !important; 
-            height: 200px !important; 
-        }
-        .tech-content h3 { font-size: 18px !important; }
-        .tech-content p { font-size: 14px !important; }
-        .tech-meta { font-size: 12px; gap: 8px; }
-        
-        .footer { padding: 30px 15px; }
+/* ===== MOBILE RESPONSIVE FIX v9 - FINAL ===== */
+@media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    
+    .top { 
+        padding: 0 5px; 
+        height: 50px; 
+        gap: 3px;
     }
+    .logo { 
+        font-size: 14px; 
+    }
+    .nav-links { 
+        gap: 0px; 
+    }
+    .HTAXT { 
+        font-size: 10px; 
+        padding: 3px 2px;
+    }
+    .theme-toggle { 
+        padding: 3px 4px; 
+        font-size: 11px;
+        border-width: 1px;
+    }
+    
+    .section { padding: 25px 12px; }
+    .section h1 { font-size: 24px; margin-bottom: 20px; }
+    
+    .tech-item {
+        flex-direction: column !important; 
+        gap: 12px;
+        padding: 12px;
+    }
+    .tech-img { 
+        width: 100% !important; 
+        height: 180px !important; 
+    }
+    .tech-content h3 { font-size: 17px !important; }
+    .tech-content p { font-size: 13px !important; }
+    .tech-meta { font-size: 11px; gap: 6px; }
+    
+    .footer { padding: 25px 12px; }
+}
     
     </style>
 </head>
