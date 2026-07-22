@@ -34,55 +34,42 @@
         .footer { background: var(--bg); color: var(--text-dim); padding: 50px 80px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border); }
     /* ===== MOBILE RESPONSIVE FIX v2 ===== */
 /* ===== MOBILE RESPONSIVE FIX v3 - FINAL ===== */
+/* ===== MOBILE RESPONSIVE FIX v4 - FINAL FIX ===== */
 @media (max-width: 768px) {
-    .top { 
-        padding: 0 10px; 
-        height: 55px; 
-        justify-content: space-between; /* navbar fit karne ke liye */
-    }
-    .logo { 
-        font-size: 18px; 
-        margin-right: 0;
-    }
-    .nav-links { 
-        gap: 5px; 
-    }
-    .HTAXT { 
-        font-size: 12px; 
-        padding: 4px 6px;
-    }
-    .theme-toggle { 
-        padding: 5px 8px; 
-        font-size: 14px;
-    }
-    .hero { 
-        padding: 20px 15px; 
-        height: 300px;
-    }
-    .hero h1 { font-size: 26px; }
-    .hero p { font-size: 14px; }
-    .section { padding: 30px 15px; }
-    .section h2 { font-size: 22px; }
+    body { overflow-x: hidden; } /* side scroll band */
     
-    /* YE SABSE IMPORTANT HAI CARDS KE LIYE */
-    .card-grid { 
-        grid-template-columns: 1fr; 
-        gap: 20px; 
+    .top { 
+        padding: 0 8px; 
+        height: 50px; 
     }
+    .logo { font-size: 16px; }
+    .nav-links { gap: 4px; }
+    .HTAXT { font-size: 11px; padding: 3px 5px; }
+    .theme-toggle { padding: 4px 6px; font-size: 12px; }
+    
+    .section { padding: 20px 10px; }
+    .section h2 { font-size: 20px; }
+    
+    /* CARD KA ASLI FIX YE HAI */
     .card {
-        display: block; /* is se pic upar text neeche aa jayega */
+        display: flex !important; /* important lagana parega */
+        flex-direction: column !important; /* upar neeche */
+        width: 100% !important;
     }
     .card-img { 
-        height: 180px; 
-        width: 100%;
-        border-radius: 16px 16px 0 0;
+        height: 180px !important; 
+        width: 100% !important;
+        border-radius: 16px 16px 0 0 !important;
     }
-    .card-content { padding: 15px; }
-    .card-content h3 { font-size: 17px; }
-    .card-content p { font-size: 13px; }
-    .card-meta { font-size: 12px; }
+    .card-content { 
+        padding: 15px !important; 
+        width: 100% !important;
+    }
+    .card-content h3 { font-size: 16px !important; }
+    .card-content p { font-size: 13px !important; }
     
-    .footer { padding: 30px 15px; }
+    .hero h1 { font-size: 24px; }
+    .footer { padding: 20px 10px; }
 }
     
     </style>
