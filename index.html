@@ -43,40 +43,51 @@
 
         .footer { background: var(--bg); color: var(--text-dim); padding: 50px 80px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border); }
     /* ===== MOBILE RESPONSIVE FIX ===== */
+/* ===== MOBILE RESPONSIVE FIX v2 ===== */
 @media (max-width: 768px) {
     .top { 
-        padding: 0 20px; 
-        height: 70px;
+        padding: 0 15px; 
+        height: 60px; /* 90px se 60px kar diya */
+        flex-wrap: wrap; /* zarorat pare to neeche aa jaye */
     }
     .logo { 
-        font-size: 22px; 
-        margin-right: 20px;
+        font-size: 20px; /* 28px se 20px */
+        margin-right: 10px;
     }
     .nav-links { 
-        gap: 10px; 
+        gap: 8px; 
+        margin-left: auto;
     }
     .HTAXT { 
-        font-size: 14px; 
+        font-size: 13px; /* 18px se 13px */
         padding: 5px 8px;
+    }
+    .theme-toggle { 
+        padding: 6px 10px; /* button bhi chota */
+        font-size: 16px;
     }
     .hero { 
         padding: 30px 20px; 
-        height: 400px;
+        height: 350px;
     }
     .hero h1 { 
-        font-size: 32px; 
-    }
-    .hero p { 
-        font-size: 16px; 
-    }
-    .section { 
-        padding: 40px 20px; 
-    }
-    .section h2 { 
         font-size: 28px; 
     }
+    .hero p { 
+        font-size: 15px; 
+    }
+    .section { 
+        padding: 30px 20px; 
+    }
+    .section h2 { 
+        font-size: 24px; 
+    }
+    .card-grid {
+        grid-template-columns: 1fr; /* mobile pe 1 card per line */
+        gap: 20px;
+    }
     .footer { 
-        padding: 40px 20px; 
+        padding: 30px 20px; 
     }
 }
     </style>
